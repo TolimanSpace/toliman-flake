@@ -26,6 +26,14 @@
     ripgrep
     minicom
 
+    spinnaker.spinnaker
+    spinnaker.spin-video
+    spinnaker.spin-update
+    spinnaker.spinnaker-python310
+
+    python310Packages.python
+    python310Packages.pip
+
     # Alias for conveniently rebuilding the system.
     (pkgs.writeShellScriptBin "remote-switch" ''
       HOSTNAME=$(cat /etc/hostname) \
@@ -33,6 +41,10 @@
       sudo nixos-rebuild switch -L -v --flake $FLAKE_URL
     '')
   ];
+
+  environment.variables = {
+    SPINNAKER_GENTL64_CTI = pkgs.spinnaker-cti-path;
+  };
 
   # Enable ssh
   services.openssh.enable = true;

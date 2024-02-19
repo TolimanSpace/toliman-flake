@@ -120,7 +120,7 @@ let
     };
 
   # Build the python module
-  spinnaker-python = stdenv.mkDerivation {
+  spinnaker-python310 = stdenv.mkDerivation {
     pname = "spinnaker-python";
     inherit version;
 

@@ -28,6 +28,7 @@
         modules = [
           ./shared
           ./devices/dev
+          ./fs/dev-ext4-root.nix
           jetpack-nixos.nixosModules.default
         ];
       };
@@ -40,6 +41,7 @@
         modules = [
           ./shared
           ./devices/prod-tester
+          # TODO: Add drive mappings
           jetpack-nixos.nixosModules.default
         ];
       };

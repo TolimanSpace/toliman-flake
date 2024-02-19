@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./state-version.nix ];
+  imports = [ ./software ./state-version.nix ];
 
   # Enable Anduril's Jetpack modules
   hardware.nvidia-jetpack = {

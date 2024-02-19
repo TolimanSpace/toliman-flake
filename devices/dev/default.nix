@@ -43,7 +43,7 @@
   ];
 
   environment.variables = {
-    SPINNAKER_GENTL64_CTI = pkgs.spinnaker-cti-path;
+    SPINNAKER_GENTL64_CTI = pkgs.spinnaker.spinnaker-cti-path;
   };
 
   # Enable ssh

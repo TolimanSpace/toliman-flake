@@ -3,6 +3,9 @@
 {
   imports = [ ];
 
+  # Set hostname
+  networking.hostName = "toliman-dev";
+
   # Enable networkmanager. On the production device, you may want to not use this,
   # hence it being declared separately in dev.
   networking.networkmanager.enable = true;
@@ -13,7 +16,7 @@
     users = {
       toliman = {
         isNormalUser = true;
-        createHome = true;
+        createHome = true; # Automatically create a home directory for the user
         home = "/home/toliman";
         extraGroups = [ "wheel" "networkmanager" "docker" ];
       };
@@ -50,8 +53,8 @@
 
     # Alias for conveniently rebuilding the system.
     (pkgs.writeShellScriptBin "remote-switch" ''
-      HOSTNAME=$(cat /etc/hostname) \
-      FLAKE_URL="github:TolimanSpace/toliman-flake#$HOSTNAME" \
+      HOSTNAME=$(cat /etc/hostname) &&
+      FLAKE_URL="github:TolimanSpace/toliman-flake#$HOSTNAME" &&
       sudo nixos-rebuild switch --refresh -L -v --flake $FLAKE_URL
     '')
   ];

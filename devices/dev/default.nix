@@ -52,7 +52,7 @@
     # Alias for conveniently rebuilding the system.
     (pkgs.writeShellScriptBin "remote-switch" ''
       HOSTNAME=$(cat /etc/hostname) \
-      FLAKE_URL=github:TolimanSpace/toliman-flake#$HOSTNAME \
+      FLAKE_URL="github:TolimanSpace/toliman-flake#$HOSTNAME" \
       sudo nixos-rebuild switch -L -v --flake $FLAKE_URL
     '')
   ];

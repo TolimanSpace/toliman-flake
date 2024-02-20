@@ -9,9 +9,8 @@ buildPythonApplication {
     spinnaker.spinnaker-python310
   ];
 
-  preFixup = ''
-    makeWrapperArgs+=("--set SPINNAKER_GENTL64_CTI ${spinnaker.spinnaker-cti-path}")
-  '';
+
+  makeWrapperArgs = [ "--set" "SPINNAKER_GENTL64_CTI" "${spinnaker.spinnaker-cti-path}" ];
 
   src = ./src;
 }

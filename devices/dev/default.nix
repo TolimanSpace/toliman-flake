@@ -31,6 +31,8 @@
     spinnaker.spin-update
     spinnaker.spinnaker-python310
 
+    spinnaker-acquisition
+
     python310Packages.python
     python310Packages.pip
 

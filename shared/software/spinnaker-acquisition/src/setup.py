@@ -11,7 +11,7 @@ setup(name='spinnaker-acquisition',
       
     entry_points={
         'console_scripts': [
-            'spinnaker-acquisition = Acquisition'
+            'spinnaker-acquisition = Acquisition:main'
         ]
     }
 )

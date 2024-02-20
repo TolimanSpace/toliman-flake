@@ -7,6 +7,8 @@ buildPythonApplication {
   propagatedBuildInputs = [
     spinnaker.spinnaker
     spinnaker.spinnaker-python310
+    
+    numpy
   ];
 
 

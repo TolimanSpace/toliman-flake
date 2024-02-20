@@ -7,5 +7,11 @@ setup(name='spinnaker-acquisition',
       # Modules to import from other scripts:
       # packages=find_packages(),
       # Executables
-      scripts=["Acquisition.py"],
-     )
+      # scripts=["Acquisition.py"],
+      
+    entry_points={
+        'console_scripts': [
+            'spinnaker-acquisition = Acquisition'
+        ]
+    }
+)

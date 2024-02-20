@@ -9,9 +9,8 @@
   networking.useDHCP = lib.mkDefault true;
 
   users = {
-    mutableUsers = false;
+    mutableUsers = true; # You can manually modify user stuff, e.g. the passwd command
     users = {
-      root = { };
       toliman = {
         isNormalUser = true;
         createHome = true;
@@ -53,7 +52,7 @@
     (pkgs.writeShellScriptBin "remote-switch" ''
       HOSTNAME=$(cat /etc/hostname) \
       FLAKE_URL="github:TolimanSpace/toliman-flake#$HOSTNAME" \
-      sudo nixos-rebuild switch -L -v --flake $FLAKE_URL
+      sudo nixos-rebuild switch --refresh -L -v --flake $FLAKE_URL
     '')
   ];
 

@@ -1,5 +1,5 @@
 { lib, spinnaker, stdenv, writeShellScriptBin, python310Packages, ... }:
-with python3Packages;
+with python310Packages;
 buildPythonApplication {
   pname = "spinnaker-acquisition";
   version = "1.0";

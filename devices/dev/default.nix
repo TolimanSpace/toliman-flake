@@ -10,8 +10,8 @@
 
   users = {
     mutableUsers = false;
-    root = {};
     users = {
+      root = { };
       toliman = {
         isNormalUser = true;
         createHome = true;

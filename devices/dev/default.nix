@@ -8,6 +8,19 @@
   networking.networkmanager.enable = true;
   networking.useDHCP = lib.mkDefault true;
 
+  users = {
+    mutableUsers = false;
+    root = {};
+    users = {
+      toliman = {
+        isNormalUser = true;
+        createHome = true;
+        home = "/home/toliman";
+        extraGroups = [ "wheel" "networkmanager" "docker" ];
+      };
+    };
+  };
+
   # Dev software
   environment.systemPackages = with pkgs; [
     # Some handy utils

@@ -68,4 +68,5 @@
   services.openssh.settings = {
     PermitRootLogin = "yes";
   };
+  services.tailscale.enable = true;
 }

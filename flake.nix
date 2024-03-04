@@ -4,13 +4,16 @@
   inputs = {
     # NixOS 23.11
     # Avoid changing it in production, but changing before production is ok
-    nixpkgs.url = "nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs?rev=a77ab169a83a4175169d78684ddd2e54486ac651";
 
-    vscode-server.url = "github:nix-community/nixos-vscode-server";
+    vscode-server={
+      url = "github:nix-community/nixos-vscode-server";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Anduril's modules for running NixOS on the Jetson
     jetpack-nixos = {
-      url = "github:anduril/jetpack-nixos/master";
+      url = "github:anduril/jetpack-nixos?rev=d9d1398b35dbe206b615d646a98b43f5b79c0c87";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

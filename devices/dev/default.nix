@@ -24,10 +24,10 @@
   };
   
   # spinaker/flir udev rules
-  services.udev.extraRules = "
-  SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"1e10\", GROUP=\"flirimaging\"
-  SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"1724\", GROUP=\"flirimaging\"
-";
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1e10", GROUP="flirimaging"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1724", GROUP="flirimaging"
+  '';
 
   # spinaker usbfs requirments
   boot.kernelParams = [ "usbcore.usbfs_memory_mb=1000" ];

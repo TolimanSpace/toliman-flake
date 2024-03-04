@@ -4,7 +4,7 @@
   inputs = {
     # NixOS 23.11
     # Avoid changing it in production, but changing before production is ok
-    nixpkgs.url = "github:NixOS/nixpkgs?rev=a77ab169a83a4175169d78684ddd2e54486ac651";
+    nixpkgs.url = "github:arduano/nixpkgs?rev=4a83662d3aacf063f72d7a7dccfa25ed4f261ca4";
 
     vscode-server={
       url = "github:nix-community/nixos-vscode-server";

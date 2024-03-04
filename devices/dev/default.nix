@@ -18,10 +18,19 @@
         isNormalUser = true;
         createHome = true; # Automatically create a home directory for the user
         home = "/home/toliman";
-        extraGroups = [ "wheel" "networkmanager" "docker" ];
+        extraGroups = [ "wheel" "networkmanager" "docker" "flirimaging" ];
       };
     };
   };
+  
+  # spinaker/flir udev rules
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1e10", GROUP="flirimaging"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1724", GROUP="flirimaging"
+  '';
+
+  # spinaker usbfs requirments
+  boot.kernelParams = [ "usbcore.usbfs_memory_mb=1000" ];
 
   # Dev software
   environment.systemPackages = with pkgs; [

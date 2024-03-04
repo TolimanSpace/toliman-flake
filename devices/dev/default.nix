@@ -61,6 +61,7 @@
     spinnaker.spinnaker-python310
 
     spinnaker-acquisition
+    jax-test
 
     python310Packages.python
     python310Packages.pip

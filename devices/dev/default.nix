@@ -11,6 +11,11 @@
   networking.networkmanager.enable = true;
   networking.useDHCP = lib.mkDefault true;
 
+  users.groups.flirimaging = {
+  name = "flirimaging";
+  gid = 656;  # Choose a unique GID (Group ID)
+  };
+
   users = {
     mutableUsers = true; # You can manually modify user stuff, e.g. the passwd command
     users = {

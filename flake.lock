@@ -41,17 +41,17 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1709528822,
-        "narHash": "sha256-sFQRnm75ee+hi69L1dtH7sCvW0hNcW9M7ZOQeB18zQk=",
+        "lastModified": 1709612454,
+        "narHash": "sha256-0tVKrfsy/EpGRJ1IS7RERb4VW5v3XSbPemk2HktoR/U=",
         "owner": "arduano",
         "repo": "nixpkgs",
-        "rev": "4a83662d3aacf063f72d7a7dccfa25ed4f261ca4",
+        "rev": "54a86737624ba3b1e63f5e6ff26aac3972509f36",
         "type": "github"
       },
       "original": {
         "owner": "arduano",
         "repo": "nixpkgs",
-        "rev": "4a83662d3aacf063f72d7a7dccfa25ed4f261ca4",
+        "rev": "54a86737624ba3b1e63f5e6ff26aac3972509f36",
         "type": "github"
       }
     },

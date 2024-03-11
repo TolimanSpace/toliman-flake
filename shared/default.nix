@@ -8,8 +8,8 @@
     enable = true;
     som = "xavier-nx-emmc";
     carrierBoard = "devkit"; # devkit enables fan control
-  };
-  hardware.nvidia = {
+  # };
+  # hardware.nvidia = {
     # Modesetting is required.
     modesetting.enable = true;
 

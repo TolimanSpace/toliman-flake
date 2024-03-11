@@ -3,12 +3,12 @@
 {
   imports = [ ./software ./state-version.nix ];
 
-  # # Enable Anduril's Jetpack modules
-  # hardware.nvidia-jetpack = {
-  #   enable = true;
-  #   som = "xavier-nx-emmc";
-  #   carrierBoard = "devkit"; # devkit enables fan control
-  # };
+  # Enable Anduril's Jetpack modules
+  hardware.nvidia-jetpack = {
+    enable = true;
+    som = "xavier-nx-emmc";
+    carrierBoard = "devkit"; # devkit enables fan control
+  };
   hardware.nvidia = {
     # Modesetting is required.
     modesetting.enable = true;

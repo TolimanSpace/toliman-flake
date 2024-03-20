@@ -1,4 +1,4 @@
-{ lib, spinnaker, stdenv, writeShellScriptBin, python310Packages, ... }:
+{ lib, stdenv, writeShellScriptBin, python310Packages, ... }:
 with python310Packages;
 buildPythonApplication {
   pname = "jax-test";

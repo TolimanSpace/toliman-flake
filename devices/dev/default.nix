@@ -27,7 +27,7 @@
       };
     };
   };
-  
+
   # spinaker/flir udev rules
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTRS{idVendor}=="1e10", GROUP="flirimaging"
@@ -55,13 +55,13 @@
     ripgrep
     minicom
 
-    spinnaker.spinnaker
-    spinnaker.spin-video
-    spinnaker.spin-update
-    spinnaker.spinnaker-python310
+    toliman.spinnaker.spinnaker
+    toliman.spinnaker.spin-video
+    toliman.spinnaker.spin-update
+    toliman.spinnaker.spinnaker-python310
 
-    spinnaker-acquisition
-    jax-test
+    toliman.spinnaker-acquisition
+    toliman.jax-test
 
     python310Packages.python
     python310Packages.pip
@@ -75,7 +75,7 @@
   ];
 
   environment.variables = {
-    SPINNAKER_GENTL64_CTI = pkgs.spinnaker.spinnaker-cti-path;
+    SPINNAKER_GENTL64_CTI = pkgs.toliman.spinnaker.spinnaker-cti-path;
   };
 
   # Enable ssh

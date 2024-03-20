@@ -1,7 +1,9 @@
 final: prev: rec {
-  spinnaker = final.callPackage ./spinnaker { };
-  spinnaker-acquisition = final.callPackage ./spinnaker-acquisition { };
-  jax-test = final.callPackage ./jax-test { };
+  toliman = {
+    spinnaker = final.callPackage ./spinnaker { };
+    spinnaker-acquisition = final.callPackage ./spinnaker-acquisition { };
+    jax-test = final.callPackage ./jax-test { };
+  };
 
   cudaPackages =
     final.nvidia-jetpack.cudaPackages // {

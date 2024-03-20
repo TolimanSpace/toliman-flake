@@ -1,18 +1,18 @@
-{ lib, spinnaker, stdenv, writeShellScriptBin, python310Packages, ... }:
+{ lib, toliman, stdenv, writeShellScriptBin, python310Packages, ... }:
 with python310Packages;
 buildPythonApplication {
   pname = "spinnaker-acquisition";
   version = "1.0";
 
   propagatedBuildInputs = [
-    spinnaker.spinnaker
-    spinnaker.spinnaker-python310
-    
+    toliman.spinnaker.spinnaker
+    toliman.spinnaker.spinnaker-python310
+
     numpy
   ];
 
 
-  makeWrapperArgs = [ "--set" "SPINNAKER_GENTL64_CTI" "${spinnaker.spinnaker-cti-path}" ];
+  makeWrapperArgs = [ "--set" "SPINNAKER_GENTL64_CTI" "${toliman.spinnaker.spinnaker-cti-path}" ];
 
   src = ./src;
 }

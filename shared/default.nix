@@ -48,6 +48,8 @@
 
   # Jetsons are all aarch64-linux
   nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
+  
+  nixpkgs.config.cudaSupport = true;
 
   # Required "experimental" features enabled
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

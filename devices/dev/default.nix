@@ -54,6 +54,7 @@
     pciutils
     ripgrep
     minicom
+    ollama
 
     toliman.spinnaker.spinnaker
     toliman.spinnaker.spin-video

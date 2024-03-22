@@ -62,7 +62,7 @@
     toliman.spinnaker.spinnaker-python310
 
     toliman.spinnaker-acquisition
-    toliman.jax-test
+    #toliman.jax-test
 
     python310Packages.python
     python310Packages.pip

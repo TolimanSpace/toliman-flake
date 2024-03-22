@@ -2,7 +2,7 @@ final: prev: rec {
   toliman = {
     spinnaker = final.callPackage ./spinnaker { };
     spinnaker-acquisition = final.callPackage ./spinnaker-acquisition { };
-    # jax-test = final.callPackage ./jax-test { };
+    jax-test = final.callPackage ./jax-test { };
     test = prev.writeText "test.txt" 
     ''
     test file
